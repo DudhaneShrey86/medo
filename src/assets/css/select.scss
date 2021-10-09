@@ -1,0 +1,20 @@
+// ////////////////// select ////////////////////
+
+select{
+  box-sizing: border-box;
+  padding: 10px 0;
+  border: none;
+  border-bottom: 1px solid $border-grey;
+  font-family: 'Nunito', sans-serif;
+  cursor: pointer;
+  outline: none;
+
+  &.orange{
+    font-size: 1.2em;
+    color: $orange;
+    font-weight: 700;
+    letter-spacing: 0.05rem;
+    background: $light-white;
+    z-index: 1;
+  }
+}

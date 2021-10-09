@@ -1,0 +1,30 @@
+//////////////////// mixins ///////////////////
+
+@mixin flex-div($justify: center, $align: center, $direction: row, $gap: 15px){
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+  flex-direction: $direction;
+  grid-gap: $gap;
+}
+
+@mixin grid-div($columns: 1fr 1fr, $gap: 15px){
+  display: grid;
+  grid-template-columns: $columns;
+  grid-gap: $gap;
+}
+
+@mixin padding-dynamic($tbs, $lr){
+  @each $tb in $tbs {
+    .padding-#{$tb}-#{$lr}{
+      padding: $tb * 1px $lr * 1px;
+    }
+  }
+}
+@mixin margin-dynamic($tbs, $lr){
+  @each $tb in $tbs {
+    .margin-#{$tb}-#{$lr}{
+      margin: $tb * 1px $lr * 1px;
+    }
+  }
+}
